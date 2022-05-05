@@ -1,21 +1,13 @@
 import Menu from './Menu';
-import Sidebar from './Sidebar';
-import Stories from './Stories';
-import Posts from './Posts';
 import BgMobile from './BgMobile';
+import Corpo from './Corpo';
 
 export default function Instagram () {
     return (
-        <div class="root">
+        <div>
             <Menu />
-            <div class="corpo">                
-                <div class="esquerda">
-                    <Stories />
-                    <Posts />
-                    <Sidebar />
-                </div>
-                <BgMobile />
-            </div>
+            <Corpo />                  
+            <BgMobile />
         </div>
     )
 }
