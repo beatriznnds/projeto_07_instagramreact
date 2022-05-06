@@ -1,4 +1,3 @@
-import Sidebar from './Sidebar';
 import Stories from './Stories';
 import Posts from './Posts';
 
@@ -7,7 +6,7 @@ export default function Esquerda () {
         <div class="esquerda">
             <Stories />
             <Posts />
-            <Sidebar />
+            
         </div>
     )
 }

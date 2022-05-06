@@ -1,3 +1,5 @@
+import logo from './assets/img/logo.png'
+
 export default function Menu () {
     return (
         <div class="navbar">
@@ -5,7 +7,7 @@ export default function Menu () {
             <div class="logo">
                 <ion-icon name="logo-instagram"></ion-icon>
                 <div class="separador"></div>
-                <img src="assets/img/logo.png" />
+                <img src={logo} />
             </div>
 
             <div class="logo-mobile">
@@ -13,7 +15,7 @@ export default function Menu () {
             </div>
 
             <div class="instagram-mobile">
-                <img src="assets/img/logo.png" />
+                <img src={logo} />
             </div>
     
             <div class="pesquisa">

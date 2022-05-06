@@ -1,78 +1,57 @@
+import perfil9gag from './assets/img/9gag.svg'
+import perfilMeowed from './assets/img/meowed.svg'
+import perfilBarked from './assets/img/barked.svg'
+import perfilNathan from './assets/img/nathanwpylestrangeplanet.svg'
+import perfilWawa from './assets/img/wawawicomics.svg'
+import perfilRespondeAi from './assets/img/respondeai.svg'
+import perfilFilosofia from './assets/img/filomoderna.svg'
+import perfilMemeria from './assets/img/memeriagourmet.svg'
+
+function StoryIndividual (props) {
+    return (
+        <div class="story">
+            <div class="imagem">
+                <img src={props.fotoperfil} />
+            </div>
+            <div class="usuario">
+                {props.usuario}
+            </div>
+        </div>
+
+    )
+}
+
 export default function Stories () {
+    const ConteudoStories = [
+        {
+            fotoperfil: perfil9gag,
+            usuario: "9gag"
+        }, {
+            fotoperfil: perfilMeowed,
+            usuario: "meowed"
+        }, {
+            fotoperfil: perfilBarked,
+            usuario: "barked"
+        }, {
+            fotoperfil: perfilNathan,
+            usuario: "nathanwpylestrangeplanet"
+        }, {
+            fotoperfil: perfilWawa,
+            usuario: "wawawicomics" 
+        }, {
+            fotoperfil: perfilRespondeAi,
+            usuario: "respondeai" 
+        }, {
+            fotoperfil: perfilFilosofia,
+            usuario: "filomoderna"
+        }, {
+            fotoperfil: perfilMemeria,
+            usuario: "memeriagourmet"
+        }
+    ]
     return (
         <div class="stories">
-            <div class="story">
-            <div class="imagem">
-                <img src="assets/img/9gag.svg" />
-            </div>
-            <div class="usuario">
-                9gag
-            </div>
-            </div>
-
-            <div class="story">
-            <div class="imagem">
-                <img src="assets/img/meowed.svg" />
-            </div>
-            <div class="usuario">
-                meowed
-            </div>
-            </div>
-
-            <div class="story">
-            <div class="imagem">
-                <img src="assets/img/barked.svg" />
-            </div>
-            <div class="usuario">
-                barked
-            </div>
-            </div>
-
-            <div class="story">
-            <div class="imagem">
-                <img src="assets/img/nathanwpylestrangeplanet.svg" />
-            </div>
-            <div class="usuario">
-                nathanwpylestrangeplanet
-            </div>
-            </div>
-
-            <div class="story">
-            <div class="imagem">
-                <img src="assets/img/wawawicomics.svg" />
-            </div>
-            <div class="usuario">
-                wawawicomics
-            </div>
-            </div>
-            
-            <div class="story">
-            <div class="imagem">
-                <img src="assets/img/respondeai.svg" />
-            </div>
-            <div class="usuario">
-                respondeai
-            </div>
-            </div>
-
-            <div class="story">
-            <div class="imagem">
-                <img src="assets/img/filomoderna.svg" />
-            </div>
-            <div class="usuario">
-                filomoderna
-            </div>
-            </div>
-
-            <div class="story">
-            <div class="imagem">
-                <img src="assets/img/memeriagourmet.svg" />
-            </div>
-            <div class="usuario">
-                memeriagourmet
-            </div>
-            </div>
-
+            {ConteudoStories.map (itens => <StoryIndividual fotoperfil={itens.fotoperfil} usuario={itens.usuario} />)}
             <div class="setinha">
             <ion-icon name="chevron-forward-circle"></ion-icon>
             </div>
