@@ -1,17 +1,17 @@
-import perfil9gag from './assets/img/9gag.svg'
-import perfilMeowed from './assets/img/meowed.svg'
-import perfilBarked from './assets/img/barked.svg'
-import perfilNathan from './assets/img/nathanwpylestrangeplanet.svg'
-import perfilWawa from './assets/img/wawawicomics.svg'
-import perfilRespondeAi from './assets/img/respondeai.svg'
-import perfilFilosofia from './assets/img/filomoderna.svg'
-import perfilMemeria from './assets/img/memeriagourmet.svg'
+import profile9gag from './assets/img/9gag.svg'
+import profileMeowed from './assets/img/meowed.svg'
+import profileBarked from './assets/img/barked.svg'
+import profileNathan from './assets/img/nathanwpylestrangeplanet.svg'
+import profileWawa from './assets/img/wawawicomics.svg'
+import profileRespondeAi from './assets/img/respondeai.svg'
+import profileFilosofia from './assets/img/filomoderna.svg'
+import profileMemeria from './assets/img/memeriagourmet.svg'
 
 function StoryIndividual (props) {
     return (
         <div class="story">
             <div class="imagem">
-                <img src={props.fotoperfil} />
+                <img src={props.fotoprofile} />
             </div>
             <div class="usuario">
                 {props.usuario}
@@ -22,36 +22,36 @@ function StoryIndividual (props) {
 }
 
 export default function Stories () {
-    const ConteudoStories = [
+    const ContentStories = [
         {
-            fotoperfil: perfil9gag,
+            fotoprofile: profile9gag,
             usuario: "9gag"
         }, {
-            fotoperfil: perfilMeowed,
+            fotoprofile: profileMeowed,
             usuario: "meowed"
         }, {
-            fotoperfil: perfilBarked,
+            fotoprofile: profileBarked,
             usuario: "barked"
         }, {
-            fotoperfil: perfilNathan,
+            fotoprofile: profileNathan,
             usuario: "nathanwpylestrangeplanet"
         }, {
-            fotoperfil: perfilWawa,
+            fotoprofile: profileWawa,
             usuario: "wawawicomics" 
         }, {
-            fotoperfil: perfilRespondeAi,
+            fotoprofile: profileRespondeAi,
             usuario: "respondeai" 
         }, {
-            fotoperfil: perfilFilosofia,
+            fotoprofile: profileFilosofia,
             usuario: "filomoderna"
         }, {
-            fotoperfil: perfilMemeria,
+            fotoprofile: profileMemeria,
             usuario: "memeriagourmet"
         }
     ]
     return (
         <div class="stories">
-            {ConteudoStories.map (itens => <StoryIndividual fotoperfil={itens.fotoperfil} usuario={itens.usuario} />)}
+            {ContentStories.map (itens => <StoryIndividual fotoprofile={itens.fotoprofile} usuario={itens.usuario} />)}
             <div class="setinha">
             <ion-icon name="chevron-forward-circle"></ion-icon>
             </div>

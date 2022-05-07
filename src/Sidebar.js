@@ -1,17 +1,17 @@
-import perfilCatana from './assets/img/catanacomics.svg'
-import perfilBadVibes from './assets/img/bad.vibes.memes.svg'
-import perfilchibi from './assets/img/chibirdart.svg'
-import perfilRazoes from './assets/img/razoesparaacreditar.svg'
-import perfilAdorable from './assets/img/adorable_animals.svg'
-import perfilSmall from './assets/img/smallcutecats.svg'
+import profileCatana from './assets/img/catanacomics.svg'
+import profileBadVibes from './assets/img/bad.vibes.memes.svg'
+import profilechibi from './assets/img/chibirdart.svg'
+import profileRazoes from './assets/img/razoesparaacreditar.svg'
+import profileAdorable from './assets/img/adorable_animals.svg'
+import profileSmall from './assets/img/smallcutecats.svg'
 
-function Sugestao (props) {
+function Sugestion (props) {
     return (
         <div class="sugestao">
             <div class="usuario">
-            <img src={props.imagemperfil} />
+            <img src={props.imgprofile} />
             <div class="texto">
-                <div class="nome">{props.nomeusuario}</div>
+                <div class="nome">{props.username}</div>
                 <div class="razao">Segue você</div>
             </div>
             </div>
@@ -21,12 +21,12 @@ function Sugestao (props) {
     )
 }
 
-function Perfil (props) {
+function Profile (props) {
     return (
         <div class="usuario">
-            <img src={props.imagemperfil} />
+            <img src={props.imgprofile} />
             <div class="texto">
-                <strong>{props.nomeusuario}</strong>
+                <strong>{props.username}</strong>
                 Catana
             </div>
         </div>
@@ -34,47 +34,47 @@ function Perfil (props) {
 }
 
 export default function Sidebar () {
-    const perfil = [
+    const profile = [
         {
-            imagemperfil: perfilCatana,
-            nomeusuario: "catanacomics"
+            imgprofile: profileCatana,
+            username: "catanacomics"
         }
     ]
 
-    const sugestoes = [
+    const sugestions = [
         {
-            imagemperfil: perfilBadVibes,
-            nomeusuario: "bad.vibes.memes"
+            imgprofile: profileBadVibes,
+            username: "bad.vibes.memes"
         },
         {
-            imagemperfil: perfilchibi,
-            nomeusuario: "chibirdart"
+            imgprofile: profilechibi,
+            username: "chibirdart"
         },
         {
-            imagemperfil: perfilRazoes,
-            nomeusuario: "razoesparaacreditar"
+            imgprofile: profileRazoes,
+            username: "razoesparaacreditar"
         },
         {
-            imagemperfil: perfilAdorable,
-            nomeusuario: "adorable_animals"
+            imgprofile: profileAdorable,
+            username: "adorable_animals"
         },
         {
-            imagemperfil: perfilSmall,
-            nomeusuario: "smallcutecats"
+            imgprofile: profileSmall,
+            username: "smallcutecats"
         },
     ]
 
     return (
         <div class="sidebar">
             
-            {perfil.map(itens => <Perfil imagemperfil={itens.imagemperfil} nomeusuario={itens.nomeusuario} />)}
+            {profile.map(itens => <Profile imgprofile={itens.imgprofile} username={itens.username} />)}
 
             <div class="sugestoes">
                 <div class="titulo">
                     Sugestões para você
                     <div>Ver tudo</div>
                 </div>
-                {sugestoes.map(itens => <Sugestao imagemperfil={itens.imagemperfil} nomeusuario={itens.nomeusuario} />)}
+                {sugestions.map(itens => <Sugestion imgprofile={itens.imgprofile} username={itens.username} />)}
                 <div class="links">
                 Sobre • Ajuda • Imprensa • API • Carreiras • Privacidade • Termos • Localizações • Contas mais relevantes • Hashtags • Idioma
                 </div>

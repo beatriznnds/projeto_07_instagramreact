@@ -1,12 +1,12 @@
 import Menu from './Menu';
 import BgMobile from './BgMobile';
-import Corpo from './Corpo';
+import Body from './Body';
 
 export default function Instagram () {
     return (
         <div>
             <Menu />
-            <Corpo />                  
+            <Body />                  
             <BgMobile />
         </div>
     )
